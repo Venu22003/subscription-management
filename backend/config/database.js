@@ -15,7 +15,7 @@ const options = {
   maxPoolSize: process.env.NODE_ENV === 'production' ? 10 : 5,
   minPoolSize: 2,
   socketTimeoutMS: 45000,
-  serverSelectionTimeoutMS: 5000,
+  serverSelectionTimeoutMS: 30000, // Increased for serverless cold starts
   
   // Retry settings
   retryWrites: true,
@@ -28,9 +28,7 @@ const options = {
 
 // Get MongoDB URI based on environment
 const getMongoURI = () => {
-  if (process.env.MONGODB_URI_PRODUCTION && process.env.NODE_ENV === 'production') {
-    return process.env.MONGODB_URI_PRODUCTION;
-  }
+  // Use MONGODB_URI for all environments
   return process.env.MONGODB_URI || 'mongodb://localhost:27017/SubscriptionManager';
 };
 
