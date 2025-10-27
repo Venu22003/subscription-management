@@ -99,6 +99,11 @@ async function signup(req, res, next) {
       message: "Registration successful! You can now log in.",
     });
   } catch (error) {
+    console.error("=== SIGNUP ERROR ===");
+    console.error("Message:", error.message);
+    console.error("Name:", error.name);
+    console.error("Stack:", error.stack);
+    console.error("==================");
     logger.error("Signup error:", {
       message: error.message,
       stack: error.stack,
