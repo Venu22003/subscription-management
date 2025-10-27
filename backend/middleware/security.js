@@ -135,7 +135,17 @@ const corsOptions = {
     ].filter(Boolean);
 
     // Allow requests with no origin (mobile apps, Postman, etc.)
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    // Allow all Vercel deployments (for preview and production)
+    if (origin.includes('.vercel.app')) {
+      return callback(null, true);
+    }
+
+    // Check against allowed origins
+    if (allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
