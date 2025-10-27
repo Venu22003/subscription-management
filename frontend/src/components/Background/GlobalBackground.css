@@ -1,0 +1,83 @@
+/* Global Shadcn-like Backgrounds (Aurora, Grid, Dots) */
+
+/* Theme variables based on body[data-theme] */
+body[data-theme='dark'] {
+  --bg-base: #0b1020;
+  --bg-fg: rgba(255, 255, 255, 0.06);
+  --bg-fg-strong: rgba(255, 255, 255, 0.12);
+}
+
+body[data-theme='light'] {
+  --bg-base: #f8fafc; /* slate-50 */
+  --bg-fg: rgba(15, 23, 42, 0.06); /* slate-900 at low alpha */
+  --bg-fg-strong: rgba(15, 23, 42, 0.12);
+}
+
+.global-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--bg-base);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Aurora variant: soft colorful blobs like shadcn's aurora */
+.global-bg.aurora {
+  overflow: hidden;
+}
+
+.global-bg.aurora::before,
+.global-bg.aurora::after {
+  content: "";
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  filter: blur(120px);
+  opacity: 0.55;
+  transform: translateZ(0);
+}
+
+/* Top-right purple/blue blob */
+.global-bg.aurora::before {
+  top: -35%;
+  right: -25%;
+  background: radial-gradient(45% 45% at 50% 50%, rgba(99, 102, 241, 0.7) 0%, rgba(168, 85, 247, 0.6) 35%, rgba(0,0,0,0) 70%);
+}
+
+/* Bottom-left teal/sky blob */
+.global-bg.aurora::after {
+  bottom: -40%;
+  left: -30%;
+  background: radial-gradient(45% 45% at 50% 50%, rgba(56, 189, 248, 0.6) 0%, rgba(20, 184, 166, 0.6) 35%, rgba(0,0,0,0) 70%);
+}
+
+/* Grid variant: subtle grid with vignette like shadcn background */
+.global-bg.grid {
+  background-image:
+    linear-gradient(var(--bg-fg) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bg-fg) 1px, transparent 1px);
+  background-size: 48px 48px, 48px 48px;
+  background-position: -1px -1px, -1px -1px;
+  /* Vignette mask */
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 120%);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 120%);
+}
+
+/* Dots variant: dotted paper effect */
+.global-bg.dots {
+  background-image: radial-gradient(var(--bg-fg-strong) 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: 0 0;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 120%);
+  mask-image: radial-gradient(ellipse at center, black 35%, transparent 120%);
+}
+
+/* Optional subtle noise overlay for texture */
+.global-bg .noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}

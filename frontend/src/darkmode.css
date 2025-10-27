@@ -1,0 +1,321 @@
+/* ========================================
+   DARK MODE - Global Styles
+   ======================================== */
+
+/* MUI Components Dark Mode */
+body[data-theme='dark'] .MuiCard-root {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  color: #e4e4e7 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body[data-theme='dark'] .MuiCardContent-root {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiTypography-root {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiTypography-colorTextSecondary {
+  color: #a1a1aa !important;
+}
+
+body[data-theme='dark'] .MuiPaper-root {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiTextField-root input,
+body[data-theme='dark'] .MuiTextField-root textarea {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiInputLabel-root {
+  color: #a1a1aa !important;
+}
+
+body[data-theme='dark'] .MuiOutlinedInput-root {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body[data-theme='dark'] .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body[data-theme='dark'] .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #667eea !important;
+}
+
+body[data-theme='dark'] .MuiSelect-select {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiMenuItem-root {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiMenuItem-root:hover {
+  background-color: rgba(102, 126, 234, 0.1) !important;
+}
+
+body[data-theme='dark'] .MuiChip-root {
+  background-color: rgba(102, 126, 234, 0.2) !important;
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiChip-colorSuccess {
+  background-color: rgba(34, 197, 94, 0.2) !important;
+  color: #4ade80 !important;
+}
+
+body[data-theme='dark'] .MuiChip-colorWarning {
+  background-color: rgba(251, 191, 36, 0.2) !important;
+  color: #fbbf24 !important;
+}
+
+body[data-theme='dark'] .MuiChip-colorError {
+  background-color: rgba(239, 68, 68, 0.2) !important;
+  color: #ef4444 !important;
+}
+
+body[data-theme='dark'] .MuiButton-root {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiButton-outlined {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body[data-theme='dark'] .MuiButton-outlined:hover {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+body[data-theme='dark'] .MuiIconButton-root {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiTableCell-root {
+  color: #e4e4e7 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+body[data-theme='dark'] .MuiTableRow-root:hover {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+body[data-theme='dark'] .MuiSkeleton-root {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+body[data-theme='dark'] .MuiDialog-paper {
+  background-color: #1e293b !important;
+}
+
+body[data-theme='dark'] .MuiDialogTitle-root,
+body[data-theme='dark'] .MuiDialogContent-root,
+body[data-theme='dark'] .MuiDialogActions-root {
+  color: #e4e4e7 !important;
+}
+
+/* Calendar Dark Mode */
+body[data-theme='dark'] .payment-calendar-container {
+  color: #e4e4e7;
+}
+
+body[data-theme='dark'] .calendar-month {
+  color: #e4e4e7;
+}
+
+body[data-theme='dark'] .calendar-day-header {
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+}
+
+body[data-theme='dark'] .day-number {
+  color: #e4e4e7;
+}
+
+body[data-theme='dark'] .payment-info strong {
+  color: #e4e4e7;
+}
+
+body[data-theme='dark'] .payment-item.upcoming {
+  background: rgba(251, 191, 36, 0.15);
+  border-left-color: #fbbf24;
+}
+
+body[data-theme='dark'] .payment-item.past {
+  background: rgba(34, 197, 94, 0.15);
+  border-left-color: #4ade80;
+}
+
+/* Dashboard Dark Mode */
+body[data-theme='dark'] .dashboard-container {
+  color: #e4e4e7;
+}
+
+/* Settings Dark Mode */
+body[data-theme='dark'] .settings-container {
+  color: #e4e4e7;
+}
+
+/* Form Controls Dark Mode */
+body[data-theme='dark'] input[type="text"],
+body[data-theme='dark'] input[type="email"],
+body[data-theme='dark'] input[type="password"],
+body[data-theme='dark'] input[type="number"],
+body[data-theme='dark'] input[type="date"],
+body[data-theme='dark'] textarea,
+body[data-theme='dark'] select {
+  background-color: rgba(30, 41, 59, 0.9);
+  color: #e4e4e7;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+body[data-theme='dark'] input[type="text"]:focus,
+body[data-theme='dark'] input[type="email"]:focus,
+body[data-theme='dark'] input[type="password"]:focus,
+body[data-theme='dark'] input[type="number"]:focus,
+body[data-theme='dark'] input[type="date"]:focus,
+body[data-theme='dark'] textarea:focus,
+body[data-theme='dark'] select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Container Backgrounds */
+body[data-theme='dark'] .MuiContainer-root {
+  color: #e4e4e7;
+}
+
+body[data-theme='dark'] .MuiBox-root {
+  color: inherit;
+}
+
+/* Avatar Dark Mode */
+body[data-theme='dark'] .MuiAvatar-root {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Divider Dark Mode */
+body[data-theme='dark'] .MuiDivider-root {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Stack and Grid */
+body[data-theme='dark'] .MuiStack-root,
+body[data-theme='dark'] .MuiGrid-root {
+  color: inherit;
+}
+
+/* Tooltip Dark Mode */
+body[data-theme='dark'] .MuiTooltip-tooltip {
+  background-color: #374151 !important;
+  color: #e4e4e7 !important;
+}
+
+/* Gradient Text - Keep Vibrant in Dark Mode */
+body[data-theme='dark'] [style*="WebkitBackgroundClip: text"],
+body[data-theme='dark'] [style*="background-clip: text"] {
+  /* Gradient text remains vibrant and visible */
+  -webkit-text-fill-color: transparent;
+}
+
+/* Loading Spinner */
+body[data-theme='dark'] .MuiCircularProgress-root {
+  color: #667eea !important;
+}
+
+/* Switch Dark Mode */
+body[data-theme='dark'] .MuiSwitch-track {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body[data-theme='dark'] .MuiSwitch-thumb {
+  background-color: #e4e4e7 !important;
+}
+
+/* Recharts Dark Mode */
+body[data-theme='dark'] .recharts-wrapper {
+  color: #e4e4e7;
+}
+
+body[data-theme='dark'] .recharts-text {
+  fill: #a1a1aa !important;
+}
+
+body[data-theme='dark'] .recharts-cartesian-axis-tick text {
+  fill: #a1a1aa !important;
+}
+
+body[data-theme='dark'] .recharts-legend-item-text {
+  color: #e4e4e7 !important;
+}
+
+/* Toast Notifications Dark Mode */
+body[data-theme='dark'] .Toastify__toast {
+  background-color: #1e293b !important;
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .Toastify__toast--success {
+  background-color: #1e293b !important;
+  border-left: 4px solid #4ade80;
+}
+
+body[data-theme='dark'] .Toastify__toast--error {
+  background-color: #1e293b !important;
+  border-left: 4px solid #ef4444;
+}
+
+body[data-theme='dark'] .Toastify__toast--warning {
+  background-color: #1e293b !important;
+  border-left: 4px solid #fbbf24;
+}
+
+body[data-theme='dark'] .Toastify__toast--info {
+  background-color: #1e293b !important;
+  border-left: 4px solid #667eea;
+}
+
+/* Ensure Glassmorphism works in dark mode */
+body[data-theme='dark'] [style*="backdropFilter"] {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+/* Subscription Cards Dark Mode Enhancement */
+body[data-theme='dark'] .MuiCard-root:hover {
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Menu Dark Mode */
+body[data-theme='dark'] .MuiMenu-paper {
+  background-color: #1e293b !important;
+}
+
+body[data-theme='dark'] .MuiMenu-list {
+  background-color: #1e293b !important;
+}
+
+/* List Items Dark Mode */
+body[data-theme='dark'] .MuiListItem-root {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiListItemText-primary {
+  color: #e4e4e7 !important;
+}
+
+body[data-theme='dark'] .MuiListItemText-secondary {
+  color: #a1a1aa !important;
+}
+
+body[data-theme='dark'] .MuiListItemIcon-root {
+  color: #a1a1aa !important;
+}

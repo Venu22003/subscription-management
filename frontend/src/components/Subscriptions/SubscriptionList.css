@@ -1,0 +1,40 @@
+.subscription-list-container {
+  padding: 30px 0;
+  min-height: calc(100vh - 60px);
+}
+
+.filters-section {
+  background: white;
+}
+
+.subscription-card {
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscription-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.subscription-card .card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.subscription-details p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.subscription-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subscription-actions .btn {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
