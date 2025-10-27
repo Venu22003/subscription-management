@@ -21,7 +21,6 @@ import {
   useTheme,
   Avatar,
   Stack,
-  Divider,
   Container,
 } from '@mui/material';
 import {

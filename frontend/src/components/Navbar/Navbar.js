@@ -14,7 +14,6 @@ import {
   MenuItem,
   alpha,
   useTheme,
-  useMediaQuery,
   Drawer,
   List,
   ListItem,
@@ -39,7 +38,7 @@ function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   
   const user = JSON.parse(localStorage.getItem('user') || '{}');
   const [anchorElUser, setAnchorElUser] = useState(null);

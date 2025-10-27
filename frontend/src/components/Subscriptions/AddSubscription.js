@@ -24,7 +24,6 @@ import {
 import {
   Save,
   Cancel,
-  AttachMoney,
   CalendarToday,
   Category as CategoryIcon,
   Description,
