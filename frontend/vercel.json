@@ -72,9 +72,5 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "env": {
-    "REACT_APP_API_URL_PRODUCTION": "@api_url_production",
-    "REACT_APP_ENV": "production"
-  }
+  ]
 }

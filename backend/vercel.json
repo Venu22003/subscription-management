@@ -25,12 +25,5 @@
       "dest": "/index.js"
     }
   ],
-  "env": {
-    "NODE_ENV": "production",
-    "MONGODB_URI_PRODUCTION": "@mongodb_uri_production",
-    "JWT_SECRET": "@jwt_secret",
-    "JWT_REFRESH_SECRET": "@jwt_refresh_secret",
-    "FRONTEND_URL_PRODUCTION": "@frontend_url_production"
-  },
   "regions": ["iad1"]
 }
