@@ -1,11 +1,14 @@
 /**
  * Winston Logger Configuration
  * Provides structured logging with different levels and transports
+ * Serverless-compatible (uses console only in production)
  */
 
 const winston = require('winston');
-const DailyRotateFile = require('winston-daily-rotate-file');
 const path = require('path');
+
+// Check if running in serverless/production environment
+const isServerless = process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME || process.env.NODE_ENV === 'production';
 
 // Define log format
 const logFormat = winston.format.combine(
@@ -28,46 +31,51 @@ const consoleFormat = winston.format.combine(
   })
 );
 
-// Create logs directory if it doesn't exist
-const logsDir = path.join(__dirname, '../logs');
-
 // Configure transports
 const transports = [
-  // Console transport
+  // Console transport (always enabled)
   new winston.transports.Console({
-    format: consoleFormat,
+    format: isServerless ? logFormat : consoleFormat,
     level: process.env.LOG_LEVEL || 'info',
   }),
-
-  // Error logs - daily rotation
-  new DailyRotateFile({
-    filename: path.join(logsDir, 'error-%DATE%.log'),
-    datePattern: 'YYYY-MM-DD',
-    level: 'error',
-    maxSize: '20m',
-    maxFiles: '14d',
-    format: logFormat,
-  }),
-
-  // Combined logs - daily rotation
-  new DailyRotateFile({
-    filename: path.join(logsDir, 'combined-%DATE%.log'),
-    datePattern: 'YYYY-MM-DD',
-    maxSize: '20m',
-    maxFiles: '14d',
-    format: logFormat,
-  }),
-
-  // Info logs
-  new DailyRotateFile({
-    filename: path.join(logsDir, 'info-%DATE%.log'),
-    datePattern: 'YYYY-MM-DD',
-    level: 'info',
-    maxSize: '20m',
-    maxFiles: '7d',
-    format: logFormat,
-  }),
 ];
+
+// Only add file transports in local development (not serverless)
+if (!isServerless) {
+  const DailyRotateFile = require('winston-daily-rotate-file');
+  const logsDir = path.join(__dirname, '../logs');
+
+  transports.push(
+    // Error logs - daily rotation
+    new DailyRotateFile({
+      filename: path.join(logsDir, 'error-%DATE%.log'),
+      datePattern: 'YYYY-MM-DD',
+      level: 'error',
+      maxSize: '20m',
+      maxFiles: '14d',
+      format: logFormat,
+    }),
+
+    // Combined logs - daily rotation
+    new DailyRotateFile({
+      filename: path.join(logsDir, 'combined-%DATE%.log'),
+      datePattern: 'YYYY-MM-DD',
+      maxSize: '20m',
+      maxFiles: '14d',
+      format: logFormat,
+    }),
+
+    // Info logs
+    new DailyRotateFile({
+      filename: path.join(logsDir, 'info-%DATE%.log'),
+      datePattern: 'YYYY-MM-DD',
+      level: 'info',
+      maxSize: '20m',
+      maxFiles: '7d',
+      format: logFormat,
+    })
+  );
+}
 
 // Create logger instance
 const logger = winston.createLogger({
