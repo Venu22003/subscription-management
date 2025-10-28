@@ -10,11 +10,15 @@ A modern, full-stack subscription management application built with the MERN sta
 
 ## 🌐 Live Demo
 
-**Frontend:** [https://subscription-management-frontend-me.vercel.app](https://subscription-management-frontend-me.vercel.app)
+**🎯 Try it now!** The app is fully deployed and operational:
 
-**Backend API:** [https://subscription-management-app-mern.vercel.app](https://subscription-management-app-mern.vercel.app)
+- **Frontend Application:** [https://subscription-management-frontend-me.vercel.app](https://subscription-management-frontend-me.vercel.app)
+- **Backend API:** [https://subscription-management-app-mern.vercel.app/api/v1](https://subscription-management-app-mern.vercel.app/api/v1)
+- **API Health Check:** [https://subscription-management-app-mern.vercel.app/health](https://subscription-management-app-mern.vercel.app/health)
 
-> **Note:** The app is fully deployed and running on Vercel's free tier with MongoDB Atlas.
+> **Status:** ✅ **LIVE & WORKING** - Deployed on Vercel (Free Tier) with MongoDB Atlas (Free M0 Cluster)
+> 
+> **Test Credentials:** Create your own account via the signup page - welcome email will be sent!
 
 ## ✨ Features
 
