@@ -4,13 +4,9 @@
 
 ### Track All Your Subscriptions in One Beautiful Dashboard
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge&logo=vercel)](https://subscription-management-app.vercel.app)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/Venu22003/subscription-management?style=for-the-badge&logo=github)](https://github.com/Venu22003/subscription-management/stargazers)
-
 *A modern, full-stack subscription management application built with the MERN stack*
 
-[Features](#-features) • [Demo](#-demo) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Documentation](#-documentation)
+[Features](#-features) • [Screenshots](#-screenshots) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Documentation](#-documentation)
 
 </div>
 
