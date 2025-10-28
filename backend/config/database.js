@@ -29,7 +29,14 @@ const options = {
 // Get MongoDB URI based on environment
 const getMongoURI = () => {
   // Use MONGODB_URI for all environments
-  return process.env.MONGODB_URI || 'mongodb://localhost:27017/SubscriptionManager';
+  const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/SubscriptionManager';
+  console.log('=== MONGODB CONNECTION DEBUG ===');
+  console.log('MONGODB_URI exists:', !!process.env.MONGODB_URI);
+  console.log('URI length:', uri.length);
+  console.log('URI preview:', uri.substring(0, 50) + '...');
+  console.log('serverSelectionTimeoutMS:', options.serverSelectionTimeoutMS);
+  console.log('================================');
+  return uri;
 };
 
 /**
@@ -40,8 +47,16 @@ const connectDB = async (retries = 5) => {
   try {
     const mongoURI = getMongoURI();
     
+    // DEBUG: Log environment and URI
+    console.log('=== MONGODB CONNECTION DEBUG ===');
+    console.log('NODE_ENV:', process.env.NODE_ENV);
+    console.log('MONGODB_URI exists:', !!process.env.MONGODB_URI);
+    console.log('MONGODB_URI length:', process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0);
+    console.log('serverSelectionTimeoutMS:', options.serverSelectionTimeoutMS);
+    
     // Mask password in logs
     const maskedURI = mongoURI.replace(/\/\/([^:]+):([^@]+)@/, '//$1:****@');
+    console.log('Connection URI:', maskedURI);
     logger.info(`Attempting to connect to MongoDB: ${maskedURI}`);
 
     const conn = await mongoose.connect(mongoURI, options);
