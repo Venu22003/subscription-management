@@ -70,6 +70,59 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // ============================================================================
+// DATABASE CONNECTION MIDDLEWARE (Serverless)
+// ============================================================================
+
+// Database connection promise for serverless
+let dbConnectionPromise = null;
+
+// For serverless environments, connect to database on module load
+if (process.env.VERCEL || process.env.NODE_ENV === 'production') {
+  const { connectDBServerless } = require('./config/database');
+  
+  // Store the connection promise
+  dbConnectionPromise = connectDBServerless()
+    .then(() => {
+      logger.info('✅ Serverless database connection established');
+      
+      // Seed categories for serverless
+      const seedCategories = require('./data/seedCategories');
+      return seedCategories();
+    })
+    .then(() => {
+      logger.info('✅ Serverless categories checked/seeded');
+    })
+    .catch((error) => {
+      logger.error('❌ Serverless database connection failed:', error);
+      throw error;
+    });
+}
+
+// Middleware to ensure database is connected before processing requests
+app.use(async (req, res, next) => {
+  // Skip health check routes
+  if (req.path === '/' || req.path === '/health' || req.path === '/api/health') {
+    return next();
+  }
+  
+  // For serverless, wait for DB connection
+  if (dbConnectionPromise) {
+    try {
+      await dbConnectionPromise;
+      dbConnectionPromise = null; // Clear after first successful connection
+    } catch (error) {
+      logger.error('Database connection failed in middleware:', error);
+      return res.status(503).json({
+        success: false,
+        message: 'Database connection not ready. Please try again.',
+      });
+    }
+  }
+  
+  next();
+});
+
+// ============================================================================
 // HEALTH CHECK & API INFO
 // ============================================================================
 
@@ -211,31 +264,6 @@ const startServer = async () => {
     process.exit(1);
   }
 };
-
-// ============================================================================
-// SERVERLESS SUPPORT (Vercel)
-// ============================================================================
-
-// For serverless environments, connect to database on module load
-if (process.env.VERCEL || process.env.NODE_ENV === 'production') {
-  const { connectDBServerless } = require('./config/database');
-  
-  // Connect to database for serverless
-  connectDBServerless()
-    .then(() => {
-      logger.info('✅ Serverless database connection established');
-      
-      // Seed categories for serverless
-      const seedCategories = require('./data/seedCategories');
-      return seedCategories();
-    })
-    .then(() => {
-      logger.info('✅ Serverless categories checked/seeded');
-    })
-    .catch((error) => {
-      logger.error('❌ Serverless database connection failed:', error);
-    });
-}
 
 // Start the server (only for local development)
 if (require.main === module) {
