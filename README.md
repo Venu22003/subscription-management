@@ -1,51 +1,49 @@
 # 🚀 Subscription Manager - Production Ready
 
-A modern, full-stack subscription management application built with React, Node.js, Express, and MongoDB. Features advanced security, beautiful UI with Material-UI, dark mode, and seamless Vercel deployment.
+A modern, full-stack subscription management application built with the MERN stack (MongoDB, Express, React, Node.js). Track all your subscriptions in one place with beautiful UI, dark mode, payment reminders, and advanced analytics.
 
 ![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)
 ![React](https://img.shields.io/badge/react-18.2.0-blue.svg)
+![MongoDB](https://img.shields.io/badge/mongodb-6.0-green.svg)
+
+## 🌐 Live Demo
+
+**Frontend:** [https://subscription-management-frontend-me.vercel.app](https://subscription-management-frontend-me.vercel.app)
+
+**Backend API:** [https://subscription-management-app-mern.vercel.app](https://subscription-management-app-mern.vercel.app)
+
+> **Note:** The app is fully deployed and running on Vercel's free tier with MongoDB Atlas.
 
 ## ✨ Features
 
 ### 🎨 Frontend
-- **Modern UI**: Material-UI with glassmorphism design
-- **Dark Mode**: Toggle between light and dark themes with persistence
-- **Animations**: Smooth transitions with Framer Motion
-- **Real-time Validation**: Form validation with React Hook Form + Yup
-- **Data Caching**: React Query for optimized data fetching
-- **Responsive Design**: Mobile-first approach
-- **PWA Ready**: Offline support with service workers
-- **Advanced Charts**: Interactive data visualization with Recharts
+- **Modern UI**: Material-UI with glassmorphism design and smooth animations
+- **Dark Mode**: Toggle between light and dark themes with local storage persistence
+- **Real-time Validation**: Form validation with React Hook Form + Yup schemas
+- **Responsive Design**: Mobile-first approach, works on all devices
+- **Payment Calendar**: Visual calendar showing all upcoming payments
+- **Advanced Analytics**: Interactive charts showing spending patterns by category
+- **Search & Filter**: Powerful search with filtering by category and status
 
 ### 🔒 Backend Security
-- **JWT Authentication**: Access + refresh token mechanism
-- **Rate Limiting**: Protection against brute force attacks
-- **Input Validation**: Comprehensive validation with Joi
-- **Data Sanitization**: XSS and NoSQL injection prevention
-- **Security Headers**: Helmet.js configuration
-- **Password Hashing**: Bcrypt with configurable rounds
-- **Email Verification**: Optional email verification flow
-- **Soft Delete**: Data preservation with recovery option
+- **JWT Authentication**: Dual token system (access + refresh tokens) with automatic rotation
+- **Rate Limiting**: Protection against brute force attacks (100 requests per 15 minutes)
+- **Input Validation**: Comprehensive validation with Joi schemas
+- **Data Sanitization**: XSS and NoSQL injection prevention with express-mongo-sanitize
+- **Security Headers**: Helmet.js configuration for production-grade security
+- **Password Hashing**: Bcrypt with 12 rounds for secure password storage
+- **Email Service**: Welcome emails and payment reminders via Testmail.app
+- **CORS Protection**: Configurable CORS with whitelist for allowed origins
 
-### 🚀 Performance
-- **Code Splitting**: Lazy loading for optimal bundle size
-- **Compression**: Gzip compression for API responses
-- **Connection Pooling**: Optimized database connections
-- **Caching**: Response caching with proper invalidation
-- **Logging**: Structured logging with Winston
-- **Error Tracking**: Centralized error handling
-
-### 📊 Advanced Features
-- **Dashboard Analytics**: Visual spending insights
-- **Category Management**: Customizable subscription categories
-- **Payment Calendar**: Visual calendar for upcoming payments
-- **Payment History**: Track all past payments
-- **Bulk Operations**: Select and manage multiple subscriptions
-- **Data Export**: Export data to CSV/PDF
-- **Search & Filter**: Advanced search capabilities
-- **Notifications**: Email reminders for upcoming payments
+### 🚀 Performance & DevOps
+- **Serverless Deployment**: Deployed on Vercel for automatic scaling
+- **Database Optimization**: MongoDB Atlas with connection pooling and indexes
+- **Error Handling**: Centralized error handling with Winston logging
+- **Email Notifications**: Automated welcome emails on signup
+- **API Documentation**: RESTful API with comprehensive endpoint documentation
+- **Environment Management**: Separate configurations for development and production
 
 ## 🏗️ Tech Stack
 
@@ -85,10 +83,10 @@ A modern, full-stack subscription management application built with React, Node.
 
 ### 1. Clone the Repository
 
-\`\`\`bash
-git clone https://github.com/yourusername/subscription-manager.git
-cd subscription-manager
-\`\`\`
+```bash
+git clone https://github.com/Venu22003/subscription-management.git
+cd subscription-management
+```
 
 ### 2. Backend Setup
 
@@ -621,29 +619,51 @@ npm run format
 
 ## 📄 License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Contributing
 
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
+Contributions are always welcome! Please read the [Contributing Guidelines](CONTRIBUTING.md) first.
 
-## 📞 Support
+### How to Contribute
 
-For issues, questions, or contributions, please open an issue on GitHub.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Support & Contact
+
+- **GitHub Issues**: [Report a bug or request a feature](https://github.com/Venu22003/subscription-management/issues)
+- **Email**: venu22003@example.com
+- **Repository**: [github.com/Venu22003/subscription-management](https://github.com/Venu22003/subscription-management)
 
 ## 🙏 Acknowledgments
 
-- Material-UI team for the amazing component library
-- MongoDB Atlas for database hosting
-- Vercel for seamless deployment
-- All contributors and users
+- [Material-UI](https://mui.com/) for the amazing component library
+- [MongoDB Atlas](https://www.mongodb.com/atlas) for database hosting
+- [Vercel](https://vercel.com) for seamless deployment and hosting
+- [Testmail.app](https://testmail.app) for email testing service
+- All contributors who have helped improve this project
+
+## 📊 Project Status
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Venu22003/subscription-management)
+![GitHub issues](https://img.shields.io/github/issues/Venu22003/subscription-management)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Venu22003/subscription-management)
+![GitHub stars](https://img.shields.io/github/stars/Venu22003/subscription-management)
+
+**Status**: ✅ **Production Ready** - Actively maintained
 
 ---
 
-**Built with ❤️ by Your Name**
+<div align="center">
+
+**Built with ❤️ by [Venu Prasad](https://github.com/Venu22003)**
 
 **⭐ Star this repo if you find it helpful!**
+
+[Live Demo](https://subscription-management-frontend-me.vercel.app) • [Report Bug](https://github.com/Venu22003/subscription-management/issues) • [Request Feature](https://github.com/Venu22003/subscription-management/issues)
+
+</div>
