@@ -12,24 +12,24 @@
 
 ---
 
-## 📸 Preview
+## 📸 Screenshots
 
 <div align="center">
 
-### Dashboard
-![Dashboard](https://via.placeholder.com/800x450/667eea/ffffff?text=Dashboard+Preview)
+### Dashboard Overview
+*Real-time analytics and spending insights*
+
+![Dashboard](./screenshots/dashboard.png)
 
 ### Subscription Management
-<p>
-  <img src="https://via.placeholder.com/380x250/764ba2/ffffff?text=List+View" width="49%" />
-  <img src="https://via.placeholder.com/380x250/667eea/ffffff?text=Calendar+View" width="49%" />
-</p>
+*Manage all your subscriptions in one place*
+
+![Subscriptions List](./screenshots/subscriptions.png)
 
 ### Dark Mode Support
-<p>
-  <img src="https://via.placeholder.com/380x250/1a237e/ffffff?text=Light+Mode" width="49%" />
-  <img src="https://via.placeholder.com/380x250/0d47a1/ffffff?text=Dark+Mode" width="49%" />
-</p>
+*Beautiful dark theme for comfortable viewing*
+
+![Settings Dark Mode](./screenshots/settings-dark.png)
 
 </div>
 
@@ -87,21 +87,6 @@
 </td>
 </tr>
 </table>
-
----
-
-## 🎯 Demo
-
-### Live Application
-Experience the app in action → **[Launch Demo](https://your-demo-link.vercel.app)**
-
-### Test Credentials
-```
-Email: demo@example.com
-Password: Demo123!@#
-```
-
-> 💡 Or create your own account to explore all features!
 
 ---
 
@@ -296,28 +281,24 @@ subscription-management/
 <details>
 <summary>Click to view all screenshots</summary>
 
-### Authentication
-<p align="center">
-  <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Login+Page" width="45%" />
-  <img src="https://via.placeholder.com/600x400/764ba2/ffffff?text=Signup+Page" width="45%" />
-</p>
+<div align="center">
 
-### Dashboard
-<p align="center">
-  <img src="https://via.placeholder.com/900x500/667eea/ffffff?text=Dashboard+Overview" width="90%" />
-</p>
+### Dashboard - Light Mode
+![Dashboard Light](./screenshots/dashboard.png)
 
-### Subscription Management
-<p align="center">
-  <img src="https://via.placeholder.com/600x400/764ba2/ffffff?text=List+View" width="45%" />
-  <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Add+Subscription" width="45%" />
-</p>
+### Subscriptions List
+![Subscriptions](./screenshots/subscriptions.png)
 
-### Calendar & Analytics
-<p align="center">
-  <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Payment+Calendar" width="45%" />
-  <img src="https://via.placeholder.com/600x400/764ba2/ffffff?text=Analytics+Charts" width="45%" />
-</p>
+### Settings & Dark Mode
+![Settings Dark Mode](./screenshots/settings-dark.png)
+
+### Calendar View
+*Coming soon - Payment calendar visualization*
+
+### Mobile Responsive
+*Optimized for all screen sizes*
+
+</div>
 
 </details>
 
@@ -427,9 +408,9 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Venu Prasad**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Venu22003-181717?style=for-the-badge&logo=github)](https://github.com/Venu22003)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/venu-prasad)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://venu-prasad.vercel.app)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:venu22003@example.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/venuprasad-s-a-28311a251)
+[![X](https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Venu2200)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:venu2003prasad@gmail.com)
 
 </div>
 
@@ -444,16 +425,6 @@ If you found this project helpful, please consider:
 - 📢 Sharing with your network
 - 🐛 Reporting bugs
 - 💡 Suggesting new features
-
----
-
-## 🙏 Acknowledgments
-
-- [Material-UI](https://mui.com/) - UI Component Library
-- [MongoDB Atlas](https://www.mongodb.com/atlas) - Database Hosting
-- [Vercel](https://vercel.com) - Deployment Platform
-- [React](https://react.dev) - Frontend Framework
-- [Express](https://expressjs.com) - Backend Framework
 
 ---
 
