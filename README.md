@@ -1,673 +1,470 @@
-# 🚀 Subscription Manager - Production Ready
+<div align="center">
 
-A modern, full-stack subscription management application built with the MERN stack (MongoDB, Express, React, Node.js). Track all your subscriptions in one place with beautiful UI, dark mode, payment reminders, and advanced analytics.
+# 🚀 Subscription Manager
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)
-![React](https://img.shields.io/badge/react-18.2.0-blue.svg)
-![MongoDB](https://img.shields.io/badge/mongodb-6.0-green.svg)
+### Track All Your Subscriptions in One Beautiful Dashboard
 
-## 🌐 Live Demo
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge&logo=vercel)](https://subscription-management-app.vercel.app)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/Venu22003/subscription-management?style=for-the-badge&logo=github)](https://github.com/Venu22003/subscription-management/stargazers)
 
-**🎯 Try it now!** The app is fully deployed and operational:
+*A modern, full-stack subscription management application built with the MERN stack*
 
-- **Frontend Application:** [https://subscription-management-frontend-me.vercel.app](https://subscription-management-frontend-me.vercel.app)
-- **Backend API:** [https://subscription-management-app-mern.vercel.app/api/v1](https://subscription-management-app-mern.vercel.app/api/v1)
-- **API Health Check:** [https://subscription-management-app-mern.vercel.app/health](https://subscription-management-app-mern.vercel.app/health)
+[Features](#-features) • [Demo](#-demo) • [Tech Stack](#-tech-stack) • [Quick Start](#-quick-start) • [Documentation](#-documentation)
 
-> **Status:** ✅ **LIVE & WORKING** - Deployed on Vercel (Free Tier) with MongoDB Atlas (Free M0 Cluster)
-> 
-> **Test Credentials:** Create your own account via the signup page - welcome email will be sent!
+</div>
+
+---
+
+## 📸 Preview
+
+<div align="center">
+
+### Dashboard
+![Dashboard](https://via.placeholder.com/800x450/667eea/ffffff?text=Dashboard+Preview)
+
+### Subscription Management
+<p>
+  <img src="https://via.placeholder.com/380x250/764ba2/ffffff?text=List+View" width="49%" />
+  <img src="https://via.placeholder.com/380x250/667eea/ffffff?text=Calendar+View" width="49%" />
+</p>
+
+### Dark Mode Support
+<p>
+  <img src="https://via.placeholder.com/380x250/1a237e/ffffff?text=Light+Mode" width="49%" />
+  <img src="https://via.placeholder.com/380x250/0d47a1/ffffff?text=Dark+Mode" width="49%" />
+</p>
+
+</div>
+
+---
 
 ## ✨ Features
 
-### 🎨 Frontend
-- **Modern UI**: Material-UI with glassmorphism design and smooth animations
-- **Dark Mode**: Toggle between light and dark themes with local storage persistence
-- **Real-time Validation**: Form validation with React Hook Form + Yup schemas
-- **Responsive Design**: Mobile-first approach, works on all devices
-- **Payment Calendar**: Visual calendar showing all upcoming payments
-- **Advanced Analytics**: Interactive charts showing spending patterns by category
-- **Search & Filter**: Powerful search with filtering by category and status
+<table>
+<tr>
+<td width="50%">
 
-### 🔒 Backend Security
-- **JWT Authentication**: Dual token system (access + refresh tokens) with automatic rotation
-- **Rate Limiting**: Protection against brute force attacks (100 requests per 15 minutes)
-- **Input Validation**: Comprehensive validation with Joi schemas
-- **Data Sanitization**: XSS and NoSQL injection prevention with express-mongo-sanitize
-- **Security Headers**: Helmet.js configuration for production-grade security
-- **Password Hashing**: Bcrypt with 12 rounds for secure password storage
-- **Email Service**: Welcome emails and payment reminders via Testmail.app
-- **CORS Protection**: Configurable CORS with whitelist for allowed origins
+### 🎯 Subscription Management
+- ✅ Create, edit, delete subscriptions
+- ✅ 15+ pre-defined categories with icons
+- ✅ Track billing cycles (monthly/yearly/weekly)
+- ✅ Payment status management
+- ✅ Auto-renewal tracking
+- ✅ Payment history logging
 
-### 🚀 Performance & DevOps
-- **Serverless Deployment**: Deployed on Vercel for automatic scaling
-- **Database Optimization**: MongoDB Atlas with connection pooling and indexes
-- **Error Handling**: Centralized error handling with Winston logging
-- **Email Notifications**: Automated welcome emails on signup
-- **API Documentation**: RESTful API with comprehensive endpoint documentation
-- **Environment Management**: Separate configurations for development and production
+</td>
+<td width="50%">
 
-## 🏗️ Tech Stack
+### 📊 Analytics & Insights
+- ✅ Total spending overview
+- ✅ Active subscriptions count
+- ✅ Upcoming payments tracker
+- ✅ Category breakdown charts
+- ✅ Monthly/yearly projections
+- ✅ Recent activity timeline
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🔐 Security & Auth
+- ✅ JWT dual-token authentication
+- ✅ Bcrypt password hashing
+- ✅ Rate limiting protection
+- ✅ XSS & injection prevention
+- ✅ Secure session management
+- ✅ Password reset flow
+
+</td>
+<td width="50%">
+
+### 🎨 User Experience
+- ✅ Dark mode with persistence
+- ✅ Responsive design (mobile-first)
+- ✅ Payment calendar visualization
+- ✅ Real-time form validation
+- ✅ Toast notifications
+- ✅ Smooth animations
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎯 Demo
+
+### Live Application
+Experience the app in action → **[Launch Demo](https://your-demo-link.vercel.app)**
+
+### Test Credentials
+```
+Email: demo@example.com
+Password: Demo123!@#
+```
+
+> 💡 Or create your own account to explore all features!
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
 
 ### Frontend
-- **React 18** - UI framework
-- **Material-UI 5** - Component library
-- **Framer Motion** - Animations
-- **React Query** - Data fetching & caching
-- **React Hook Form** - Form management
-- **Yup** - Schema validation
-- **Recharts** - Data visualization
-- **Axios** - HTTP client
-- **Date-fns** - Date manipulation
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Material-UI](https://img.shields.io/badge/MUI-5.14-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+![Framer](https://img.shields.io/badge/Framer_Motion-10.16-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 ### Backend
-- **Node.js 18+** - Runtime environment
-- **Express 4** - Web framework
-- **MongoDB** - Database
-- **Mongoose** - ODM
-- **JWT** - Authentication
-- **Bcrypt** - Password hashing
-- **Joi** - Input validation
-- **Winston** - Logging
-- **Helmet** - Security headers
-- **Express Rate Limit** - Rate limiting
-- **Compression** - Response compression
+![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4.18-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## 📋 Prerequisites
+### DevOps
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-- **Node.js** >= 18.0.0
-- **npm** >= 9.0.0
-- **MongoDB** (local or Atlas)
-- **Git**
-- **Vercel CLI** (for deployment)
+</div>
+
+### Complete Technology Overview
+
+```
+Frontend               Backend                Database
+├─ React 18           ├─ Node.js 18+         ├─ MongoDB Atlas
+├─ Material-UI 5      ├─ Express 4           ├─ Mongoose ODM
+├─ React Query        ├─ JWT Auth            └─ Connection Pool
+├─ React Hook Form    ├─ Bcrypt              
+├─ Framer Motion      ├─ Winston             DevOps
+├─ Recharts           ├─ Nodemailer          ├─ Vercel Serverless
+└─ Axios              └─ Helmet              ├─ GitHub CI/CD
+                                              └─ Environment Vars
+```
+
+---
 
 ## 🚀 Quick Start
 
-### 1. Clone the Repository
+### Prerequisites
+- Node.js >= 18.0.0
+- npm >= 9.0.0
+- MongoDB (local or Atlas)
 
+### Installation
+
+1️⃣ **Clone the repository**
 ```bash
 git clone https://github.com/Venu22003/subscription-management.git
 cd subscription-management
 ```
 
-### 2. Backend Setup
-
-\`\`\`bash
+2️⃣ **Backend setup**
+```bash
 cd backend
-
-# Install dependencies
 npm install
-
-# Create .env file
 cp .env.example .env
-
-# Edit .env with your configuration
-# MONGODB_URI=mongodb://localhost:27017/SubscriptionManager
-# JWT_SECRET=your_secret_key
-# etc.
-
-# Start development server
+# Edit .env with your MongoDB URI and secrets
 npm run dev
-\`\`\`
+```
 
-Backend will run on `http://localhost:5000`
-
-### 3. Frontend Setup
-
-\`\`\`bash
+3️⃣ **Frontend setup**
+```bash
 cd frontend
-
-# Install dependencies
 npm install
-
-# Create .env file
 cp .env.example .env
-
-# Edit .env
-# REACT_APP_API_URL=http://localhost:5000/api/v1
-
-# Start development server
+# Edit .env with your API URL
 npm start
-\`\`\`
+```
 
-Frontend will run on `http://localhost:3000`
+4️⃣ **Access the application**
+- Frontend: http://localhost:3000
+- Backend: http://localhost:5000
+- API Docs: http://localhost:5000/api/v1
 
-## 🌐 MongoDB Atlas Setup
+### Environment Variables
 
-### Step 1: Create Account
-1. Go to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. Sign up for a free account
-3. Create a new project
+<details>
+<summary>Click to expand backend variables</summary>
 
-### Step 2: Create Cluster
-1. Click "Build a Database"
-2. Choose **FREE** tier (M0)
-3. Select your preferred cloud provider and region
-4. Click "Create Cluster"
-
-### Step 3: Database User
-1. Go to "Database Access"
-2. Click "Add New Database User"
-3. Choose "Password" authentication
-4. Create username and password (save these!)
-5. Set user privileges to "Read and write to any database"
-
-### Step 4: Network Access
-1. Go to "Network Access"
-2. Click "Add IP Address"
-3. Click "Allow Access from Anywhere" (0.0.0.0/0)
-   - **For Vercel deployment**, this is required
-   - For production, consider IP whitelisting
-
-### Step 5: Get Connection String
-1. Go to "Database" → "Connect"
-2. Choose "Connect your application"
-3. Copy the connection string
-4. Replace `<password>` with your database user password
-5. Replace `myFirstDatabase` with your database name (e.g., `SubscriptionManager`)
-
-Example connection string:
-\`\`\`
-mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/SubscriptionManager?retryWrites=true&w=majority
-\`\`\`
-
-### Step 6: Update Environment Variables
-
-**Backend `.env`:**
-\`\`\`env
-MONGODB_URI_PRODUCTION=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/SubscriptionManager?retryWrites=true&w=majority
-\`\`\`
-
-## 🚢 Vercel Deployment
-
-### Step 1: Prepare for Deployment
-
-**Backend:**
-\`\`\`bash
-cd backend
-# Ensure all dependencies are in package.json
-npm install
-\`\`\`
-
-**Frontend:**
-\`\`\`bash
-cd frontend
-# Test production build
-npm run build
-\`\`\`
-
-### Step 2: Install Vercel CLI
-
-\`\`\`bash
-npm install -g vercel
-vercel login
-\`\`\`
-
-### Step 3: Deploy Backend
-
-\`\`\`bash
-cd backend
-vercel
-
-# Follow prompts:
-# - Setup and deploy: Yes
-# - Which scope: Your account
-# - Link to existing project: No
-# - Project name: subscription-manager-backend
-# - Directory: ./
-# - Override settings: No
-\`\`\`
-
-**Set Environment Variables:**
-\`\`\`bash
-vercel env add MONGODB_URI_PRODUCTION
-# Paste your MongoDB Atlas connection string
-
-vercel env add JWT_SECRET
-# Enter a strong secret key
-
-vercel env add JWT_REFRESH_SECRET
-# Enter another strong secret key
-
-vercel env add FRONTEND_URL_PRODUCTION
-# Enter your frontend URL (will get after frontend deployment)
-
-vercel env add NODE_ENV
-# Enter: production
-\`\`\`
-
-**Deploy to production:**
-\`\`\`bash
-vercel --prod
-\`\`\`
-
-**Note your backend URL:** `https://your-backend.vercel.app`
-
-### Step 4: Deploy Frontend
-
-\`\`\`bash
-cd frontend
-vercel
-
-# Follow prompts similar to backend
-# Project name: subscription-manager-frontend
-\`\`\`
-
-**Set Environment Variables:**
-\`\`\`bash
-vercel env add REACT_APP_API_URL_PRODUCTION
-# Enter: https://your-backend.vercel.app/api/v1
-
-vercel env add REACT_APP_ENV
-# Enter: production
-\`\`\`
-
-**Deploy to production:**
-\`\`\`bash
-vercel --prod
-\`\`\`
-
-### Step 5: Update Backend with Frontend URL
-
-\`\`\`bash
-cd backend
-vercel env add FRONTEND_URL_PRODUCTION
-# Enter: https://your-frontend.vercel.app
-
-# Redeploy backend
-vercel --prod
-\`\`\`
-
-### Step 6: Configure Custom Domain (Optional)
-
-**In Vercel Dashboard:**
-1. Go to your project settings
-2. Navigate to "Domains"
-3. Add your custom domain
-4. Update DNS records as instructed
-5. Wait for SSL certificate (automatic)
-
-## 📝 Environment Variables
-
-### Backend (.env)
-
-\`\`\`env
-# Server
-NODE_ENV=production
-PORT=5000
-
+```env
 # Database
 MONGODB_URI=mongodb://localhost:27017/SubscriptionManager
-MONGODB_URI_PRODUCTION=mongodb+srv://...
 
 # JWT
-JWT_SECRET=your_super_secret_jwt_key
-JWT_REFRESH_SECRET=your_refresh_secret_key
+JWT_SECRET=your_jwt_secret_key_here
+JWT_REFRESH_SECRET=your_refresh_secret_key_here
 JWT_EXPIRE=15m
 JWT_REFRESH_EXPIRE=7d
 
-# Frontend URLs
+# URLs
 FRONTEND_URL=http://localhost:3000
-FRONTEND_URL_PRODUCTION=https://your-app.vercel.app
 
 # Email (Optional)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASSWORD=your-app-password
-EMAIL_FROM=noreply@subscriptionmanager.com
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_password
+```
+</details>
 
-# Security
-BCRYPT_ROUNDS=12
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX_REQUESTS=100
+<details>
+<summary>Click to expand frontend variables</summary>
 
-# Logging
-LOG_LEVEL=info
-\`\`\`
-
-### Frontend (.env)
-
-\`\`\`env
-# API
+```env
 REACT_APP_API_URL=http://localhost:5000/api/v1
-REACT_APP_API_URL_PRODUCTION=https://your-backend.vercel.app/api/v1
+REACT_APP_ENV=development
+```
+</details>
 
-# App
-REACT_APP_NAME=Subscription Manager
-REACT_APP_VERSION=2.0.0
+---
 
-# Features
-REACT_APP_ENABLE_DARK_MODE=true
-REACT_APP_ENABLE_PWA=true
+## 📚 Documentation
 
-# Environment
-REACT_APP_ENV=production
-\`\`\`
+<table>
+<tr>
+<td align="center" width="33%">
 
-## 🧪 Testing
+### 📖 [Quick Start](docs/QUICKSTART.md)
+Get up and running in 5 minutes
 
-### Backend Tests
-\`\`\`bash
-cd backend
-npm test
-\`\`\`
+</td>
+<td align="center" width="33%">
 
-### Frontend Tests
-\`\`\`bash
-cd frontend
-npm test
-\`\`\`
+### 🚀 [Deployment](docs/DEPLOYMENT.md)
+Deploy to production step-by-step
 
-## 📚 API Documentation
+</td>
+<td align="center" width="33%">
 
-### Authentication Endpoints
+### 🔌 [API Docs](docs/API.md)
+Complete API endpoint reference
 
-#### POST /api/v1/auth/signup
-Register a new user.
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
 
-**Request:**
-\`\`\`json
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "SecurePass123!",
-  "confirmPassword": "SecurePass123!"
-}
-\`\`\`
+### 🤝 [Contributing](docs/CONTRIBUTING.md)
+How to contribute to the project
 
-**Response:**
-\`\`\`json
-{
-  "success": true,
-  "message": "Registration successful!"
-}
-\`\`\`
+</td>
+<td align="center" width="33%">
 
-#### POST /api/v1/auth/login
-Authenticate user.
+### 📋 [Changelog](CHANGELOG.md)
+Version history and updates
 
-**Request:**
-\`\`\`json
-{
-  "email": "john@example.com",
-  "password": "SecurePass123!"
-}
-\`\`\`
+</td>
+<td align="center" width="33%">
 
-**Response:**
-\`\`\`json
-{
-  "success": true,
-  "message": "Login successful",
-  "accessToken": "eyJhbGciOiJIUzI1NiIs...",
-  "refreshToken": "eyJhbGciOiJIUzI1NiIs...",
-  "user": {
-    "id": "507f1f77bcf86cd799439011",
-    "name": "John Doe",
-    "email": "john@example.com"
-  }
-}
-\`\`\`
+### 📄 [License](LICENSE)
+MIT License details
 
-#### POST /api/v1/auth/refresh-token
-Refresh access token.
+</td>
+</tr>
+</table>
 
-**Request:**
-\`\`\`json
-{
-  "refreshToken": "eyJhbGciOiJIUzI1NiIs..."
-}
-\`\`\`
+---
 
-### Subscription Endpoints
+## 🏗️ Project Structure
 
-#### GET /api/v1/subscriptions
-Get all user subscriptions.
-
-**Headers:**
-\`\`\`
-Authorization: Bearer <accessToken>
-\`\`\`
-
-**Query Parameters:**
-- `page` (optional): Page number (default: 1)
-- `limit` (optional): Items per page (default: 10)
-- `status` (optional): Filter by status (active/paused/cancelled)
-- `category` (optional): Filter by category
-- `search` (optional): Search by name
-
-**Response:**
-\`\`\`json
-{
-  "success": true,
-  "subscriptions": [...],
-  "pagination": {
-    "total": 25,
-    "page": 1,
-    "limit": 10,
-    "pages": 3
-  }
-}
-\`\`\`
-
-#### POST /api/v1/subscriptions
-Create new subscription.
-
-**Headers:**
-\`\`\`
-Authorization: Bearer <accessToken>
-\`\`\`
-
-**Request:**
-\`\`\`json
-{
-  "name": "Netflix",
-  "price": 15.99,
-  "currency": "USD",
-  "billingCycle": "monthly",
-  "nextBillingDate": "2024-12-01",
-  "category": "Entertainment",
-  "description": "Streaming service",
-  "status": "active"
-}
-\`\`\`
-
-### Dashboard Endpoints
-
-#### GET /api/v1/dashboard/stats
-Get dashboard statistics.
-
-**Response:**
-\`\`\`json
-{
-  "success": true,
-  "stats": {
-    "totalSubscriptions": 12,
-    "activeSubscriptions": 10,
-    "monthlySpending": 156.88,
-    "yearlySpending": 1882.56,
-    "upcomingPayments": 3
-  }
-}
-\`\`\`
-
-## 🛠️ Development
-
-### Project Structure
-
-\`\`\`
-subscription-manager/
-├── backend/
-│   ├── config/
-│   │   ├── database.js
-│   │   └── logger.js
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── subscriptionController.js
-│   │   ├── categoryController.js
-│   │   └── dashboardController.js
-│   ├── middleware/
-│   │   ├── authMiddleware.js
-│   │   ├── errorHandler.js
-│   │   ├── security.js
-│   │   └── validation.js
-│   ├── models/
-│   │   ├── User.js
-│   │   ├── Subscription.js
-│   │   └── Category.js
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── subscriptionRoutes.js
-│   │   ├── categoryRoutes.js
-│   │   └── dashboardRoutes.js
-│   ├── utils/
-│   │   └── errors.js
-│   ├── .env
-│   ├── .env.example
-│   ├── index.js
-│   ├── package.json
-│   └── vercel.json
+```
+subscription-management/
+├── 📁 backend/
+│   ├── 📁 config/          # Database & logger configs
+│   ├── 📁 controllers/     # Business logic
+│   ├── 📁 middleware/      # Auth, validation, security
+│   ├── 📁 models/          # Mongoose schemas
+│   ├── 📁 routes/          # API endpoints
+│   ├── 📁 services/        # Email service
+│   ├── 📄 index.js         # Entry point
+│   └── 📄 vercel.json      # Deployment config
 │
-└── frontend/
-    ├── public/
-    ├── src/
-    │   ├── components/
-    │   │   ├── Auth/
-    │   │   ├── Dashboard/
-    │   │   ├── Subscriptions/
-    │   │   ├── Calendar/
-    │   │   ├── Navbar/
-    │   │   └── Settings/
-    │   ├── context/
-    │   │   └── AuthContext.js
-    │   ├── services/
-    │   │   ├── api.js
-    │   │   ├── enhancedAuthApi.js
-    │   │   └── subscriptionApi.js
-    │   ├── theme/
-    │   │   ├── theme.js
-    │   │   └── ThemeContext.js
-    │   ├── App.js
-    │   └── index.js
-    ├── .env
-    ├── .env.example
-    ├── package.json
-    └── vercel.json
-\`\`\`
+├── 📁 frontend/
+│   ├── 📁 src/
+│   │   ├── 📁 components/  # React components
+│   │   ├── 📁 context/     # Global state
+│   │   ├── 📁 services/    # API services
+│   │   ├── 📁 theme/       # MUI theming
+│   │   └── 📄 App.js       # Main component
+│   └── 📄 vercel.json      # Deployment config
+│
+└── 📁 docs/                # Documentation
+```
 
-### Code Style
+---
 
-This project uses:
-- **ESLint** for code linting
-- **Prettier** for code formatting
+## 🎨 Screenshots
 
-\`\`\`bash
-# Backend
-cd backend
-npm run lint
-npm run format
+<details>
+<summary>Click to view all screenshots</summary>
 
-# Frontend
-cd frontend
-npm run lint
-npm run format
-\`\`\`
+### Authentication
+<p align="center">
+  <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Login+Page" width="45%" />
+  <img src="https://via.placeholder.com/600x400/764ba2/ffffff?text=Signup+Page" width="45%" />
+</p>
 
-## 🔒 Security Best Practices
+### Dashboard
+<p align="center">
+  <img src="https://via.placeholder.com/900x500/667eea/ffffff?text=Dashboard+Overview" width="90%" />
+</p>
 
-1. **Never commit `.env` files** - Use `.env.example` as template
-2. **Use strong JWT secrets** - Generate with `openssl rand -base64 32`
-3. **Enable HTTPS in production** - Vercel provides this automatically
-4. **Regular dependency updates** - Use `npm audit` and `npm update`
-5. **Input validation** - Always validate on both frontend and backend
-6. **Rate limiting** - Configured for authentication endpoints
-7. **CORS configuration** - Only allow trusted origins
-8. **SQL injection prevention** - Using Mongoose with sanitization
-9. **XSS protection** - Input sanitization and security headers
-10. **Password hashing** - Using bcrypt with configurable rounds
+### Subscription Management
+<p align="center">
+  <img src="https://via.placeholder.com/600x400/764ba2/ffffff?text=List+View" width="45%" />
+  <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Add+Subscription" width="45%" />
+</p>
 
-## 📈 Performance Optimization
+### Calendar & Analytics
+<p align="center">
+  <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Payment+Calendar" width="45%" />
+  <img src="https://via.placeholder.com/600x400/764ba2/ffffff?text=Analytics+Charts" width="45%" />
+</p>
 
-- **Code splitting** - Lazy loading routes
-- **Image optimization** - WebP format with fallbacks
-- **Compression** - Gzip for API responses
-- **Caching** - React Query for data caching
-- **Database indexes** - On frequently queried fields
-- **Connection pooling** - Optimized MongoDB connections
-- **CDN delivery** - Vercel Edge Network
+</details>
 
-## 🐛 Troubleshooting
+---
 
-### Backend won't start
-- Check MongoDB connection string
-- Verify all environment variables are set
-- Check port 5000 is not in use
+## 🔌 API Endpoints
 
-### Frontend can't connect to backend
-- Verify `REACT_APP_API_URL` is correct
-- Check CORS configuration in backend
-- Ensure backend is running
+### Authentication
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/v1/auth/signup` | Register new user |
+| POST | `/api/v1/auth/login` | Authenticate user |
+| POST | `/api/v1/auth/refresh-token` | Refresh access token |
+| POST | `/api/v1/auth/logout` | Logout user |
+| POST | `/api/v1/auth/forgot-password` | Request password reset |
 
-### Deployment issues
-- Verify all environment variables in Vercel
-- Check build logs for errors
-- Ensure MongoDB Atlas allows connections from anywhere (0.0.0.0/0)
+### Subscriptions
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/v1/subscriptions` | Get all subscriptions |
+| POST | `/api/v1/subscriptions` | Create subscription |
+| GET | `/api/v1/subscriptions/:id` | Get single subscription |
+| PUT | `/api/v1/subscriptions/:id` | Update subscription |
+| DELETE | `/api/v1/subscriptions/:id` | Delete subscription |
 
-### Database connection fails
-- Check MongoDB Atlas IP whitelist
-- Verify connection string format
-- Ensure database user has correct permissions
+### Dashboard
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/v1/dashboard/stats` | Get statistics |
+| GET | `/api/v1/dashboard/spending` | Get spending data |
+| GET | `/api/v1/dashboard/upcoming` | Get upcoming payments |
 
-## 📄 License
+📖 [View Complete API Documentation →](docs/API.md)
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
 
-## 👥 Contributing
+## 🤝 Contributing
 
-Contributions are always welcome! Please read the [Contributing Guidelines](CONTRIBUTING.md) first.
+We welcome contributions! Here's how you can help:
 
-### How to Contribute
+1. 🍴 Fork the repository
+2. 🌿 Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. 💻 Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
+5. 🔀 Open a Pull Request
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+📖 Read our [Contributing Guidelines](docs/CONTRIBUTING.md) for more details.
 
-## 📞 Support & Contact
+---
 
-- **GitHub Issues**: [Report a bug or request a feature](https://github.com/Venu22003/subscription-management/issues)
-- **Email**: venu22003@example.com
-- **Repository**: [github.com/Venu22003/subscription-management](https://github.com/Venu22003/subscription-management)
+## 🐛 Bug Reports & Feature Requests
 
-## 🙏 Acknowledgments
+Found a bug or have a feature idea?
 
-- [Material-UI](https://mui.com/) for the amazing component library
-- [MongoDB Atlas](https://www.mongodb.com/atlas) for database hosting
-- [Vercel](https://vercel.com) for seamless deployment and hosting
-- [Testmail.app](https://testmail.app) for email testing service
-- All contributors who have helped improve this project
+- 🐞 [Report a Bug](https://github.com/Venu22003/subscription-management/issues/new?template=bug_report.md)
+- 💡 [Request a Feature](https://github.com/Venu22003/subscription-management/issues/new?template=feature_request.md)
+- 💬 [Ask a Question](https://github.com/Venu22003/subscription-management/discussions)
+
+---
 
 ## 📊 Project Status
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Venu22003/subscription-management)
-![GitHub issues](https://img.shields.io/github/issues/Venu22003/subscription-management)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Venu22003/subscription-management)
-![GitHub stars](https://img.shields.io/github/stars/Venu22003/subscription-management)
+![GitHub last commit](https://img.shields.io/github/last-commit/Venu22003/subscription-management?style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Venu22003/subscription-management?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/Venu22003/subscription-management?style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Venu22003/subscription-management?style=flat-square)
 
-**Status**: ✅ **Production Ready** - Actively maintained
+**Status:** ✅ **Production Ready** - Actively Maintained
+
+---
+
+## 🎯 Roadmap
+
+### Version 2.1.0 (Coming Soon)
+- [ ] Email verification on signup
+- [ ] Two-factor authentication (2FA)
+- [ ] Data export (CSV/PDF)
+- [ ] Bulk operations
+- [ ] Mobile notifications
+
+### Version 2.2.0
+- [ ] Social authentication (Google, GitHub)
+- [ ] Family sharing features
+- [ ] Advanced analytics
+- [ ] Custom categories with icons
+- [ ] Multi-language support
+
+### Version 3.0.0
+- [ ] AI-powered recommendations
+- [ ] Price tracking
+- [ ] Banking API integration
+- [ ] Chrome extension
+- [ ] Mobile app (React Native)
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+<div align="center">
+
+**Venu Prasad**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Venu22003-181717?style=for-the-badge&logo=github)](https://github.com/Venu22003)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/venu-prasad)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://venu-prasad.vercel.app)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:venu22003@example.com)
+
+</div>
+
+---
+
+## 🌟 Show Your Support
+
+If you found this project helpful, please consider:
+
+- ⭐ Starring the repository
+- 🍴 Forking the project
+- 📢 Sharing with your network
+- 🐛 Reporting bugs
+- 💡 Suggesting new features
+
+---
+
+## 🙏 Acknowledgments
+
+- [Material-UI](https://mui.com/) - UI Component Library
+- [MongoDB Atlas](https://www.mongodb.com/atlas) - Database Hosting
+- [Vercel](https://vercel.com) - Deployment Platform
+- [React](https://react.dev) - Frontend Framework
+- [Express](https://expressjs.com) - Backend Framework
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by [Venu Prasad](https://github.com/Venu22003)**
+### Built with ❤️ using MERN Stack
 
-**⭐ Star this repo if you find it helpful!**
-
-[Live Demo](https://subscription-management-frontend-me.vercel.app) • [Report Bug](https://github.com/Venu22003/subscription-management/issues) • [Request Feature](https://github.com/Venu22003/subscription-management/issues)
+**[⬆ Back to Top](#-subscription-manager)**
 
 </div>
