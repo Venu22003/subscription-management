@@ -212,7 +212,32 @@ const startServer = async () => {
   }
 };
 
-// Start the server
+// ============================================================================
+// SERVERLESS SUPPORT (Vercel)
+// ============================================================================
+
+// For serverless environments, connect to database on module load
+if (process.env.VERCEL || process.env.NODE_ENV === 'production') {
+  const { connectDBServerless } = require('./config/database');
+  
+  // Connect to database for serverless
+  connectDBServerless()
+    .then(() => {
+      logger.info('✅ Serverless database connection established');
+      
+      // Seed categories for serverless
+      const seedCategories = require('./data/seedCategories');
+      return seedCategories();
+    })
+    .then(() => {
+      logger.info('✅ Serverless categories checked/seeded');
+    })
+    .catch((error) => {
+      logger.error('❌ Serverless database connection failed:', error);
+    });
+}
+
+// Start the server (only for local development)
 if (require.main === module) {
   startServer();
 }
